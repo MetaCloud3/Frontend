@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Login.css';
-import logo from './logo3.png'; // Adjust the path as necessary
-import googleLogin from './google_login.png'; // Import the Google login button
-import kakaoLogin from './kakao_login.png'; // Import the Kakao login button
-import naverLogin from './naver_login.png'; // Import the Naver login button
+import logo from './images/app-logo.png';
+import googleLogin from './images/btn_google.svg'; // Import the Google login button
+import kakaoLogin from './images/btn_kakao.svg'; // Import the Kakao login button
+import naverLogin from './images/btn_naver.svg'; // Import the Naver login button
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -22,10 +22,9 @@ const Login = () => {
             <div className="outer-container">
                 <div className="header-container">
                     <img src={logo} alt="Logo" className="logo" />
-                    <span className="brand-name">MetaCloud3</span>
+                    <span className="brand-name">MetaCloud</span>
                 </div>
                 <div className="login-container">
-                    <h2>Login</h2>
                     <form onSubmit={handleSubmit}>
                         <div>
                             <input
@@ -47,22 +46,23 @@ const Login = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
-                        <button type="submit">Login</button>
+                        <button className="login-button" type="submit">로그인</button>
                     </form>
                     <div className="signup-container">
                         <span>Don't have an account? <a href="/signup">Sign up</a></span>
                     </div>
-                </div>
-                <div className="social-login-container">
-                    <button className="google-login-button">
-                        <img src={googleLogin} alt="Google Login" className="login-logo" />
-                    </button>
-                    <button className="kakao-login-button">
-                        <img src={kakaoLogin} alt="Kakao Login" className="login-logo" />
-                    </button>
-                    <button className="naver-login-button">
-                        <img src={naverLogin} alt="Naver Login" className="login-logo" />
-                    </button>
+
+                    <div className="social-login-container">
+                        <button className="google-login-button">
+                            <img src={googleLogin} alt="Google Login" className="login-logo"/>
+                        </button>
+                        <button className="kakao-login-button">
+                            <img src={kakaoLogin} alt="Kakao Login" className="login-logo"/>
+                        </button>
+                        <button className="naver-login-button">
+                            <img src={naverLogin} alt="Naver Login" className="login-logo"/>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

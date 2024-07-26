@@ -1,80 +1,43 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.background-container {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background-image: url('../assets/img/background.png'); /* Make sure to set the correct path to your background image */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: -1; /* Ensure it is behind other elements */
-}
-
 .login-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150%;
+    width: 100%;
     height: 100%;
-    position: relative;
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    position: absolute;
     top: 0;
-    width: 100%;
+    width: 120%;
     justify-content: center;
-    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .header-container .logo {
-    width: 60px; /* Adjust the size of the logo */
-    height: 50px;
+    width: 15%;
+    margin-top: 10px;
     margin-right: 10px;
 }
 
 .header-container .brand-name {
-    font-size: 24px; /* Adjust the font size of the label */
-    font-weight: bold;
-    margin-right: 20px;
+    font-family: PlusJakartaSans-Bold, serif;
+    font-size: 60px;
 }
 
 .outer-container {
-    background-color: rgba(255, 255, 255, 0.8); /* Light background color */
-    padding: 70px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    width: 120%; /* Adjust width as needed */
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: relative;
 }
 
 .login-container {
     background-color: white;
-    padding: 40px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center align text */
-    width: 70%; /* Adjust width as needed */
-}
-
-.login-container h2 {
-    margin-bottom: 20px;
+    padding: 40px 40px 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 60%;
 }
 
 .login-container form div {
@@ -83,37 +46,37 @@ body, html {
 
 .login-container input {
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #888888;
+    font-size: 15px;
 }
 
 .login-container input::placeholder {
-    color: #888; /* Shadowed text color */
+    color: #888;
 }
 
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #000; /* Black button color */
+.login-button {
+    background-color: #000;
     color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 0px; /* Add space below the login button */
-}
-
-.login-container button:hover {
-    background-color: #333; /* Darker grey on hover */
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
 }
 
 .signup-container {
-    margin-top: 20px; /* Space between login button and sign-up text */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .signup-container a {
-    color: #000; /* Color for the sign-up link */
+    color: #000;
     text-decoration: none;
-    margin-bottom: 10px; /* Space below the sign-up link */
 }
 
 .signup-container a:hover {
@@ -121,9 +84,8 @@ body, html {
 }
 
 .social-login-container {
-    margin-top: 20px; /* Space above the social login buttons */
-    display: flex;
-    flex-direction: column; /* Display buttons in a column */
+    display: inline-flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -131,15 +93,13 @@ body, html {
 .google-login-button,
 .kakao-login-button,
 .naver-login-button {
-    background: none; /* Remove background color */
-    border: none; /* Remove border */
-    padding: 0;
+    background: none;
+    border: none;
+    padding: 10px;
     cursor: pointer;
-    margin: 5px 0; /* 버튼 사이 간격 */
 }
 
 .login-logo {
-    width: 200px; /* 소셜 로그인 버튼 사이즈 조정 */
+    width: 40px;
     height: auto;
 }
-
