@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './Login.css';
 import logo from './logo3.png'; // Adjust the path as necessary
+import googleLogin from './google_login.png'; // Import the Google login button
+import kakaoLogin from './kakao_login.png'; // Import the Kakao login button
+import naverLogin from './naver_login.png'; // Import the Naver login button
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -49,6 +52,17 @@ const Login = () => {
                     <div className="signup-container">
                         <span>Don't have an account? <a href="/signup">Sign up</a></span>
                     </div>
+                </div>
+                <div className="social-login-container">
+                    <button className="google-login-button">
+                        <img src={googleLogin} alt="Google Login" className="login-logo" />
+                    </button>
+                    <button className="kakao-login-button">
+                        <img src={kakaoLogin} alt="Kakao Login" className="login-logo" />
+                    </button>
+                    <button className="naver-login-button">
+                        <img src={naverLogin} alt="Naver Login" className="login-logo" />
+                    </button>
                 </div>
             </div>
         </div>
