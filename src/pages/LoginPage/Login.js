@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Login.css';
-import logo from './images/app-logo.png';
-import googleLogin from './images/btn_google.svg'; // Import the Google login button
-import kakaoLogin from './images/btn_kakao.svg'; // Import the Kakao login button
-import naverLogin from './images/btn_naver.svg'; // Import the Naver login button
+import logo from '../../images/app-logo.png';
+import googleLogin from '../../images/btn_google.svg';
+import kakaoLogin from '../../images/btn_kakao.svg';
+import naverLogin from '../../images/btn_naver.svg';
 
 const Login = () => {
     const [username, setUsername] = useState('');
