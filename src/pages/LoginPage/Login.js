@@ -4,10 +4,16 @@ import logo from '../../images/app-logo.png';
 import googleLogin from '../../images/btn_google.svg';
 import kakaoLogin from '../../images/btn_kakao.svg';
 import naverLogin from '../../images/btn_naver.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    function gotoJoin() {
+        navigate('/join');
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -49,11 +55,11 @@ const Login = () => {
                         <button className="login-button" type="submit">로그인</button>
                     </form>
                     <div className="signup-container">
-                        <span>Don't have an account? <a href="/signup">Sign up</a></span>
+                        <span>Don't have an account? <a onClick={gotoJoin}>Sign up</a></span>
                     </div>
 
                     <div className="social-login-container">
-                        <button className="google-login-button">
+                    <button className="google-login-button">
                             <img src={googleLogin} alt="Google Login" className="login-logo"/>
                         </button>
                         <button className="kakao-login-button">
