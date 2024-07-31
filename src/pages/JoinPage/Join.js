@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Join.css';
 import logo from '../../images/app-logo.png';
+import { motion } from "framer-motion";
 
 const Join = () => {
     const [username, setUsername] = useState('');
@@ -24,7 +25,11 @@ const Join = () => {
                     <img src={logo} alt="Logo" className="logo" />
                     <span className="brand-name">MetaCloud</span>
                 </div>
-                <div className="join-container">
+                <motion.div className="join-container"
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            transition={{ duration: 0.5 }}
+                >
                     <form onSubmit={handleSubmit}>
                         <div>
                             <input
@@ -68,7 +73,7 @@ const Join = () => {
                         </div>
                         <button className="join-button" type="submit">회원가입</button>
                     </form>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
