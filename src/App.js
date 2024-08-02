@@ -1,15 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { HelmetProvider } from 'react-helmet-async';
 import LogIn from './pages/LoginPage/Login';
 import Join from './pages/JoinPage/Join';
 import './App.css';
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <AnimatedRoutes />
-        </BrowserRouter>
+        <HelmetProvider>
+            <BrowserRouter>
+                <AnimatedRoutes />
+            </BrowserRouter>
+        </HelmetProvider>
     );
 };
 

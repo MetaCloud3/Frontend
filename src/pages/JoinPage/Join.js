@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './Join.css';
 import logo from '../../images/app-logo.png';
 import { motion } from "framer-motion";
@@ -19,6 +20,10 @@ const Join = () => {
 
     return (
         <div className="join-page">
+            <Helmet>
+                <title>MetaCloud</title>
+                <meta name="description" content="회원가입 페이지입니다. MetaCloud에 가입하세요." />
+            </Helmet>
             <div className="background-container"></div>
             <div className="outer-container">
                 <div className="header-container">

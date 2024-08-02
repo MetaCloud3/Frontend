@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './Login.css';
 import logo from '../../images/app-logo.png';
 import googleLogin from '../../images/btn_google.svg';
@@ -24,6 +25,10 @@ const Login = () => {
 
     return (
         <div className="login-page">
+            <Helmet>
+                <title>MetaCloud</title>
+                <meta name="description" content="로그인 페이지입니다. MetaCloud에 로그인하세요." />
+            </Helmet>
             <div className="background-container"></div>
             <div className="outer-container">
                 <div className="header-container">
@@ -57,16 +62,15 @@ const Login = () => {
                     <div className="signup-container">
                         <span>Don't have an account? <a onClick={gotoJoin}>Sign up</a></span>
                     </div>
-
                     <div className="social-login-container">
-                    <button className="google-login-button">
-                            <img src={googleLogin} alt="Google Login" className="login-logo"/>
+                        <button className="google-login-button">
+                            <img src={googleLogin} alt="Google Login" className="login-logo" />
                         </button>
                         <button className="kakao-login-button">
-                            <img src={kakaoLogin} alt="Kakao Login" className="login-logo"/>
+                            <img src={kakaoLogin} alt="Kakao Login" className="login-logo" />
                         </button>
                         <button className="naver-login-button">
-                            <img src={naverLogin} alt="Naver Login" className="login-logo"/>
+                            <img src={naverLogin} alt="Naver Login" className="login-logo" />
                         </button>
                     </div>
                 </div>
