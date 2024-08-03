@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import './Login.css';
-import logo from '../../images/app-logo.png';
-import googleLogin from '../../images/btn_google.svg';
-import kakaoLogin from '../../images/btn_kakao.svg';
-import naverLogin from '../../images/btn_naver.svg';
+import logo from '../../assets/images/app-logo.png';
+import googleLogin from '../../assets/images/btn_google.svg';
+import kakaoLogin from '../../assets/images/btn_kakao.svg';
+import naverLogin from '../../assets/images/btn_naver.svg';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {

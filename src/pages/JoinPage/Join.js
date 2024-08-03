@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import './Join.css';
-import logo from '../../images/app-logo.png';
+import logo from '../../assets/images/app-logo.png';
 import { motion } from "framer-motion";
 
 const Join = () => {
